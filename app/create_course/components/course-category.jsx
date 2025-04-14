@@ -2,6 +2,9 @@
 import { UserInputContext } from '@/app/context/UserInputContext';
 import Image from 'next/image';
 import { useContext } from 'react';
+import image from '../../assets/programming.jpeg'
+import health from '../../assets/health.jpeg'
+import creative from '../../assets/creative.jpeg'
 
 export function CategorySelection({ selectedCategory, onSelectCategory }) {
   const { userCourseInput, setUserCourseInput } = useContext(UserInputContext);
@@ -10,17 +13,17 @@ export function CategorySelection({ selectedCategory, onSelectCategory }) {
     {
       id: 'programming',
       name: 'Programming',
-      icon: '/placeholder.svg?height=48&width=48',
+      icon: image,
     },
     {
       id: 'health',
       name: 'Health',
-      icon: '/placeholder.svg?height=48&width=48',
+      icon: health,
     },
     {
       id: 'creative',
       name: 'Creative',
-      icon: '/placeholder.svg?height=48&width=48',
+      icon: creative,
     },
   ];
 

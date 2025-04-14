@@ -1,9 +1,14 @@
 "use client"
 import React, { useState } from 'react';
 import LoginPage from './Login'; // Import your Login component
+import { handleGitHubSignIn } from './signinserver';
 
 function Banner() {
   const [showLogin, setShowLogin] = useState(false);
+
+  const handleGithubLogin =()=>{
+    handleGitHubSignIn()
+  }
 
   const handleGetStartedClick = () => {
     setShowLogin(true);
@@ -27,7 +32,7 @@ function Banner() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <button
               className="block w-full rounded px-12 py-3 bg-purple-400 text-sm font-medium text-white shadow hover:bg-purple-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto transition duration-300 ease-in-out transform hover:scale-105"
-              onClick={handleGetStartedClick}
+              onClick={handleGithubLogin}
             >
               Get Started
             </button>
